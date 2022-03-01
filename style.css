@@ -77,5 +77,68 @@ article header p {
 
 aside {
   background-color: #f7f7f7;
-  border: 5px solid #1098ad;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+body {
+  /* background-color: grey; */
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  /* can write # or odd/even */
+  /* color: red; */
+}
+
+/* article p:first-child {
+  color: red;
+} */
+/* this does not work, because the parent/child elements apply - misconception */
+
+/* Styling Links */
+
+a:link { /* this only targets a elements with a link attribute - hyperlink */
+  color: #1098ad 
+  text-decoration: none;
+}
+
+a:visited { /* links you've already visited */
+  /* color: #777; */
+  color:#1098ad
+}
+
+a:hover {  /* when your mouse is hovering over a link */
+  color: orangered
+  font-weight: weight;
+  text-decoration: underline wavy orangered;
+}
+
+a:active { /* links you are presently visiting */
+ background-color: black;
+ font-style: italic;
+}
+
+/* Resolving conflicts */
+#copyright {
+  color: red; /* This would have the highest priority because it is an ID (#) selector. so the font would be red */
+}
+
+.copyright { /* If you hover over selector, it will give you the rank of specificity */
+  color: blue;
+}
+
+.text { /* since .copyright and .text are both class selectors, the "last selector in the code" rule applies here, so the text would be yellow */
+  color: yellow;
+}
+
+footer p {
+  color: green;
 }
